@@ -5,7 +5,7 @@ import Filters from "./components/Filters/Filters";
 import Cards from "./components/Cards/Cards";
 
 function App() {
-  let api = 
+  //let api = 
   return (
     <div className="App">
       <h1 className="text-center ubuntu my-4">
