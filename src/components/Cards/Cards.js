@@ -9,10 +9,10 @@ const Cards = ({ results }) => {
   if (results) {
     display = results.map(result => {
       let { id, name, image, location, status } = result
-      return <div key={id} className="col-4 position-relative">
-        <div className="">
-          <img src={image} alt={name} className="img-fluid" />
-          <div className="content">
+      return <div key={id} className="col-4 mb-4 position-relative">
+        <div className={styles.cards}>
+          <img src={image} alt={name} className={`${styles.img} img-fluid`} />
+          <div style={{ padding: "10px" }} className="content">
             <div className="fs-4 fw-bold mb-4">{name}</div>
             <div className="">
               <div className="fs-6">Last location</div>
@@ -20,18 +20,39 @@ const Cards = ({ results }) => {
             </div>
           </div>
         </div>
-        <div className={`${`styles.badge`} position-absolute badge bg-danger`}>
-          {status}
-          </div>
+        {(() => {
+          if (status === "Dead") {
+            return (
+              <div className={`${styles.badge} position-absolute badge rounded-pill text-bg-danger`}>
+                {status}
+              </div>
+            );
+          }
+          else if (status === "Alive") {
+            return (
+              <div className={`${styles.badge} position-absolute badge rounded-pill text-bg-success`}>
+                {status}
+              </div>
+            );
+          }
+          else {
+            return (
+              <div className={`${styles.badge} position-absolute badge rounded-pill text-bg-secondary`}>
+                {status}
+              </div>
+            );
+          }
+        })()}
+
       </div >
     });
   } else {
-  display = "No Characters Found :/";
-}
+    display = "No Characters Found :/";
+  }
 
-return (
-  <>{display}</>
-);
+  return (
+    <>{display}</>
+  );
 };
 
 export default Cards; 
