@@ -3,9 +3,11 @@ import "bootstrap/dist/js/bootstrap";
 import React, { useState, useEffect } from "react";
 import Filters from "./components/Filters/Filters";
 import Cards from "./components/Cards/Cards";
+import Pagination from "./components/Pagination/Pagination";
 
 function App() {
   let [pageNumber, setPageNumber] = useState(1);
+
   let [fetchedData, updateFetchedData] = useState([]);
   let { info, results } = fetchedData;
 
@@ -34,11 +36,13 @@ function App() {
           </div>
           <div className="col-8">
             <div className="row">
-              <Cards results={results}/>
+              <Cards results={results} />
             </div>
           </div>
         </div>
       </div>
+
+      <Pagination pageNumber={pageNumber} setPageNumber={setPageNumber} />
     </div>
   );
 }
