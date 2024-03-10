@@ -1,5 +1,13 @@
-import Search from "./components/Search/Search";
-import Card from "./components/Card/Card";
-import Pagination from "./components/Pagination/Pagination";
-import Filter from "./components/Filter/Filter";
-import Navbar from "./components/Navbar/Navbar";
+import React from "react";
+import styles from "./Search.module.scss";
+
+const Search = () => {
+    return (
+        <form className="">
+            <input placeholder="Search for Characters" type="text" className="" />
+            <button className="btn btn-primary">Search</button>
+        </form>
+    );
+};
+
+export default Search;
