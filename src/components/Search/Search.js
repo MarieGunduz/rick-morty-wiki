@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "./Search.module.scss";
 
-const Search = () => {
+const Search = ({ setSearch }) => {
     return (
         <form className="d-flex justify-content-center gap-4 mb-5">
             <input placeholder="Search for Characters" type="text" className={styles.input} />
-            <button className="btn btn-primary">Search</button>
+            <button className={`${styles.btn} btn btn-primary fs-5`}>Search</button>
         </form>
     );
 };
