@@ -1,7 +1,7 @@
 import React from "react";
-import Gender from "./Category/Status";
+import Status from "./Category/Status";
 import Species from "./Category/Species";
-import Status from "./Category/Gender";
+import Gender from "./Category/Gender";
 
 const Filters = () => {
   return ( 
