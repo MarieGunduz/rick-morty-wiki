@@ -35,9 +35,7 @@ function App() {
 
       <div className="container">
         <div className="row">
-          <div className="col-3">
             <Filters />
-          </div>
           <div className="col-8">
             <div className="row">
               <Cards results={results} />
@@ -46,7 +44,7 @@ function App() {
         </div>
       </div>
 
-      <Pagination pageNumber={pageNumber} setPageNumber={setPageNumber} />
+      <Pagination info={info} pageNumber={pageNumber} setPageNumber={setPageNumber} />
     </div>
   );
 }
