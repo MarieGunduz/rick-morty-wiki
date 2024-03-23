@@ -9,7 +9,7 @@ import Search from "./components/Search/Search";
 function App() {
   let [pageNumber, setPageNumber] = useState(1);
   let [search, setSearch] = useState("");
-  let [status, setStatus] = useState("Dead");
+  let [status, setStatus] = useState("");
 
   let [fetchedData, updateFetchedData] = useState([]);
   let { info, results } = fetchedData;
@@ -36,7 +36,7 @@ function App() {
 
       <div className="container">
         <div className="row">
-            <Filters setStatus/>
+            <Filters setStatus={setStatus} setPageNumber={setPageNumber}/>
           <div className="col-8">
             <div className="row">
               <Cards results={results} />
