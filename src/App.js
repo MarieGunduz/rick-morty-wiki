@@ -7,6 +7,8 @@ import Pagination from "./components/Pagination/Pagination";
 import Search from "./components/Search/Search";
 import Navbar from "./components/Navbar/Navbar";
 
+import {} from 'react-router-dom'
+
 function App() {
   let [pageNumber, setPageNumber] = useState(1);
   let [search, setSearch] = useState("");
